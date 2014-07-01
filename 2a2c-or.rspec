@@ -1,0 +1,145 @@
+<rspec type="request" generated_by="Flack" generated="2014-05-29T19:15:47Z" xsi:schemaLocation="http://www.geni.net/resources/rspec/3 http://www.geni.net/resources/rspec/3/request.xsd" xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" xmlns:client="http://www.protogeni.net/resources/rspec/ext/client/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.geni.net/resources/rspec/3">
+  <node client_id="C1" component_manager_id="urn:publicid:IDN+exogeni.net+authority+am" exclusive="false">
+    <sliver_type name=“xo.small”>
+      <disk_image name="http://geni-images.renci.org/images/standard/debian/deb6.v1.0.10.xml" version="c120b9d79d3f3882114c0e59cce14f671ef9b0db"/>
+    </sliver_type>
+    <services>
+      <execute command="chmod +x /tmp/controller.sh; /tmp/controller.sh" shell="sh"/>
+      <install install_path="/tmp" url="http://www.research.rutgers.edu/~zhewang/controller.sh"/>
+    </services>
+    <interface client_id="C1:if0">
+      <flack:interface_info addressBound="false" bound="false"/>
+    </interface>
+    <flack:node_info x="496" y="268" unbound="true"/>
+  </node>
+  <node client_id="C2" component_manager_id="urn:publicid:IDN+exogeni.net+authority+am" exclusive="false">
+    <sliver_type name=“xo.small”>
+      <disk_image name="http://geni-images.renci.org/images/standard/debian/deb6.v1.0.10.xml" version="c120b9d79d3f3882114c0e59cce14f671ef9b0db"/>
+    </sliver_type>
+    <services>
+      <execute command="chmod +x /tmp/controller.sh; /tmp/controller.sh" shell="sh"/>
+      <install install_path="/tmp" url="http://www.research.rutgers.edu/~zhewang/controller.sh"/>
+    </services>
+    <interface client_id="C2:if0">
+      <flack:interface_info addressBound="false" bound="false"/>
+    </interface>
+    <flack:node_info x="805" y="272" unbound="true"/>
+  </node>
+  <node client_id="A1" component_manager_id="urn:publicid:IDN+exogeni.net+authority+am" exclusive="false">
+    <sliver_type name="xo.small">
+      <disk_image name="http://geni-images.renci.org/images/standard/debian/deb6.v1.0.10.xml" version="c120b9d79d3f3882114c0e59cce14f671ef9b0db"/>
+    </sliver_type>
+    <interface client_id="A1:if0">
+      <ip address="10.10.10.3" netmask="255.255.255.0" type="ipv4"/>
+      <flack:interface_info addressBound="true" bound="false"/>
+    </interface>
+    <flack:node_info x="446" y="476" unbound="true"/>
+  </node>
+  <node client_id="A2" component_manager_id="urn:publicid:IDN+exogeni.net+authority+am" exclusive="false">
+    <sliver_type name="xo.small">
+      <disk_image name="http://geni-images.renci.org/images/standard/debian/deb6.v1.0.10.xml" version="c120b9d79d3f3882114c0e59cce14f671ef9b0db"/>
+    </sliver_type>
+    <interface client_id="A2:if0">
+      <ip address="10.10.10.4" netmask="255.255.255.0" type="ipv4"/>
+      <flack:interface_info addressBound="true" bound="false"/>
+    </interface>
+    <flack:node_info x="808" y="499" unbound="true"/>
+  </node>
+  <link client_id="lan0">
+    <flack:link_info x="642" y="364" unboundVlantag="true" xmlns="http://www.protogeni.net/resources/rspec/ext/flack/1"/>
+    <flack:link_info x="642" y="364" unboundVlantag="true" xmlns="http://www.protogeni.net/resources/rspec/ext/flack/1"/>
+    <component_manager name="urn:publicid:IDN+exogeni.net+authority+am"/>
+    <interface_ref client_id="C1:if0"/>
+    <interface_ref client_id="C2:if0"/>
+    <interface_ref client_id="A1:if0"/>
+    <interface_ref client_id="A2:if0"/>
+    <property source_id="C1:if0" dest_id="C2:if0"/>
+    <property source_id="C1:if0" dest_id="A1:if0"/>
+    <property source_id="C1:if0" dest_id="A2:if0"/>
+    <property source_id="C2:if0" dest_id="C1:if0"/>
+    <property source_id="C2:if0" dest_id="A1:if0"/>
+    <property source_id="C2:if0" dest_id="A2:if0"/>
+    <property source_id="A1:if0" dest_id="C1:if0"/>
+    <property source_id="A1:if0" dest_id="C2:if0"/>
+    <property source_id="A1:if0" dest_id="A2:if0"/>
+    <property source_id="A2:if0" dest_id="C1:if0"/>
+    <property source_id="A2:if0" dest_id="C2:if0"/>
+    <property source_id="A2:if0" dest_id="A1:if0"/>
+    <link_type name="lan"/>
+    <flack:link_info x="642" y="364" unboundVlantag="true"/>
+  </link>
+  <client:client_info name="Flack" environment="Flash Version: MAC 13,0,0,214, OS: Mac OS 10.9.3, Arch: x86, Screen: 2048x1152 @ 72 DPI with touchscreen type none" version="v17.26" url="https://www.emulab.net/protogeni/flack-stable/flack.swf"/>
+  <history:slice_history backIndex="2" note="Edited C1" xmlns:history="http://www.protogeni.net/resources/rspec/ext/history/1">
+    <history:state>eNrtWFtv2zYUft+vIPTqUKLuFyRF3WYbCqTrsBTF0BeDpCibiCx5JGU7/fU7uthxnGxRsgHJgxEn
+tuhz/c75zlF0rvRKcGRuV+LCUuKvRmhjobmohKJG5DN2e2H9UlJ+c3B4YXnEDTAJsZd+dZMsCDI/
++W6hrZaZ5guxpFc1p0bW1YW1MGaVOc5ms7FBX9qVMI4Sum4UF9rpnDs+GiXlDOHZW52Ds2VZ6axo
+Q7vnZaVqU/+jEbE1TqfjuDsTvJSiMs+00SvdGYHU71nY+Hat5o5HiOv8+fnqukMFy0obWnExaI1E
+x3r3E0Ln7fczXUouZrIqagSWTFcymt9aqGkklCURhBZFkuCQMooD1+c45czDhVcwn/mBoB4g1yio
+C/zJVg0DezLPPl3+NuGLfQjZtDISX15+uZ50DidXv376QLXkx3HPVd2s9F3oYtuh5lBjKF8sW4Q2
+8kY6f7SJ/Lw1otLQFNrprOI2DUDQ6dKr6lygHtVZm8pHgJbXy1VdtSdLWtG5UN03DyIfvLYRTGhj
+FrWS5nZClxYSW142Wq4Bp4KWWnRIHmC5bk22YO4w7x0s8CbMWC5SllAf+yR1cRAxgZM0yjHzUxqm
+CUtcEVlHVYArZWZGLsUBRZKvbpr5ceZHNiHkexvVSqqOHvdEI0yCVtQjWegPohwMPxB8zGYnWKtZ
+V9sfC7Gh1fw917ZqDOCmbZE3Z+jfaj5ptFCTQfN/rDNAfK/QgP4AfDtyUEXbvLa1rZe0LIf6gEwu
+9c1MLqHog8guEnCLu3PITVRcdjTrD5yWXDlVuZMLJmnVvkX22rWJ7RIbMrIQ+NXdWOKuR1iax2nu
+F36SeK4bcCLClHPhBkUUu6JIGcnZPmjnIOrhSFZGqILyo77NZEHuEpErRPMc+gvQdLtA2peFAMYl
+1TC6vDC0d7/EGgaxXK2DnWsw0k2sbO+v79nB7Ie6qcCvUQ2MFdZf9M2+D32vOBz05lrG9Za2F1aQ
+QjPDqPeiBAZExQ6M9vx0WvHHmeq9KlOTLHZ5Hgnm47DwYxwUeYCZSCMckpTEhAg/JumJqSemHjPV
+G8FU780xNSFhz9TYey5Tp6+7U6OMuXEeJoTgmBGOA0pzDJuU4ZTQIExJmMNtyompJ6YeMXU6Zqf6
+b2+nBv1ODeLo2Uz1XvnuN4oYiXxBcMDjBHaqCHFKOcW5CFgANAVu5iemnph6zNQxOzV4gzs16Zma
+pk8xtZTVzWHGJa3IOGJ5J768hC99uVrY9+WKAq8rlx8F+3J9g0IYOt+1wsPnK+OfC+08PxjAAxnH
+j2DnmCszJYpH/lt8Ws4bJzcdaW963x5gsxLK3KKDdh1CQ7nQj8YwSuconnE6I/x4x7G5z9eZvkTn
+6dim7vNjm74A6+kLcJu+ALeHOi/wc4R1x+aDDQjc/W98H6Z0q9V96ls923V8a6f3NDzKFtVaqrpa
+dg9+4Uwv0Ld+OWbo8/Qjcv0zAj+eG5yhL9dwRjm8I1heqe2foaniiwxtk+gMXcMsFaDlkSDZum7o
+ofco9tDl75/QRpoFMnXDF7oTQn3GMFIOVvHajW2vvT9UZT+u9DCvxLIpKeuG1X509SMKw+Jgpegv
+bL0phvR75A4eEa+l2FxYc0VXi1bkvJ917/4GUdmzSQ==</history:state>
+    <history:state>eNrtWFlv20YQfu+vWPBVXnJ5H7WCKHEaGMhR1EFQ5EVYLociYYpkuUtJ7kN/e4eHZEl2G1kNkBQw
+fMhazfnNfDP0XjayBkHUXQ1TrYE/WpBKIwsooeEKknl8N9V+Kbi43TucahYzHcpcaoWfzCBy3Ij5
+XzSykXkkRQZL/q4SXOVVOdUyperIMNbrtY76uV6CMhqQVdsIkEbv3LDJSVLGGJ6+kQk6WxaljNIu
+tAMvdVOp6h+NwEYZvY5hbk2IIodSPdHGoHRvBFM/sLC29apZGBZjpvH7+3c3PSo0L6XipYBR60R0
+tBc/EXLZfT6XRS5gnpdpRdCS6kvGkzuNtG2OZQmA8TQNAurymFPHtAUNRWzR1EpjO7Yd4BYi1zZY
+F/wV1W2M9vIkur76MBHZLoRoVqqcXl19vJn0Difv3l6/4jIXx3Evmqqt5X3osOlRM7hSXGTLDqF1
+fpsbv3WJvNkoKCU2hTR6q7RLAxE0+vTKKgEyoDrvUnmN0IpqWVdld7LkJV9A03/yIPLRaxfBhLcq
+q5pc3U34UiOwEUUr8xXilPJCQo/kHparzmQH5hbzwUFG124UJxDGAbepzUKTOl4MNAi9hMZ2yN0w
+iAMTPO2oCviuUXOVL2GPIsEnM4xsP7I9nTH2pYuqzpueHgeiHmVOJ2qxyLVHUYGGHwg+ZrMXrJp5
+X9s/M1jzcvFSSL1pFeImdUjaC/JvNZ+0EprJqPkN64wQHxQa0R+B70YOKXmX15tN9fbNh2v63hkr
+hFJJLm/n+RLLPgptY0HHtD/H7KAUeU+04cDo6JXwJjESiHNedi+evjJ1pptMx5w0gp5lP5iEabE4
+TPwwsVM7CCzTdAQDNxQCTCf1fBPSMGZJvAvb2It7mwk0K+xkuQsaNiBaBV3nYstiLyE6VUImG2Ko
+ZW2IqlRNVRTQ6DL7+ZEzbKEMimKq4Z/Gzmo/NoqCjK/zmqtsqnXaHZmLgzGCnQy8wcLuVd74a6zr
+kbP7zA7yQH8KmpSLI0JGecru65PXhCcJusM2MXt8u2+NYH8sucSZbLmuvv1h2rhh8nrl7GXWj+Jo
+528g42j2VdV2CA7EJfH+u13gO83xYLDXzZLB1GaqOSHSFJeY5QWIVjnaUU07mrk0OvHHZ5D1XWdQ
+EPmmSDyIbeqmtk+dNHFoDKFHXRYynzGwfRY+z6BvM4M2lS6XyK7/1wR6nKrWCVS1vj1Ve1Kdz9SA
+uQNTfeupTJ1936cFL4pNP3EDxqgfM0EdzhOKzwgxDRl33JC5CT6APTP1malHTJ2dslTtH46pjjPs
+VMf3nsxU6zs/13tezDwbGHWEH+BOBZeGXHCagBM7SFPkZvLM1GemHjP1lJ3q/IA7NRiYGoZfY2qR
+l7f7GRe8ZKcRy3rmyzl8GcrVwb4rl+dYfblsz9mV6zMWQvHFthUe3hydfuO19fxgAI9kPH0EG8dc
+mTeQPvLv4tflrNPkZifamx3aQ2xqaNQd2WvXMTSSgHw0hpN0juI5TecEP9ZxbObTdWbn6Hw9tpn5
+9NhmZ2A9OwO32Rm4PdQ5w88R1j2b9zYgcve/8X2c0p1W/9fQ6tG24zs7g6fxkh7KVd5U5bK/0sYz
+mZHPw3KMyPvZa2LaFwy/LNO5IB9v8IwLfCW4vELdviCzRmQR2QTeBbnBWQqoZTEn2Jima5GXxLfI
+1a/XZJ2rjKiqFZnshciQMY6UvVW8Mn3d8vZuqOQ4r2DZFjzuh9VudA0jiuLiiAsY3uhynY7pD8jt
+XX6vclhPtUXD6/4W63KYdS/+BtZD+5c=</history:state>
+    <history:state>eNrtWFlv20YQfu+vWPBVXnJ5H7WCKHEaGMhR1EFQ5EVYLociYYpkuUtJ7kN/e4eHZEl2G1kNkBQw
+fMhazfnNfDP0XjayBkHUXQ1TrYE/WpBKIwsooeEKknl8N9V+Kbi43TucahYzHcpcaoWfzCBy3MgK
+v2hkI/NIigyW/F0luMqrcqplStWRYazXax31c70EZTQgq7YRII3euWGTk6SMMTx9IxN0tixKGaVd
+aAde6qZS1T8agY0yeh3D3JoQRQ6leqKNQeneCKZ+YGFt61WzMCzGTOP39+9uelRoXkrFSwGj1ono
+aC9+IuSy+3wui1zAPC/TiqAl1ZeMJ3caadscyxIA42kaBNTlMaeOaQsaitiiqZXGdmw7wC1Erm2w
+LvgrqtsY7eVJdH31YSKyXQjRrFQ5vbr6eDPpHU7evb1+xWUujuNeNFVby/vQYdOjZnCluMiWHULr
+/DY3fusSebNRUEpsCmn0VmmXBiJo9OmVVQJkQHXepfIaoRXVsq7K7mTJS76Apv/kQeSj1y6CCW9V
+VjW5upvwpUZgI4pW5ivEKeWFhB7JPSxXnckOzC3mg4OMrt0oTiCMA25Tm4UmdbwYaBB6CY3tkLth
+EAcmeNpRFfBdo+YqX8IeRYJPZhjZfmR7OmPsSxdVnTc9PQ5EPcqcTtRikWuPogINPxB8zGYvWDXz
+vrZ/ZrDm5eKlkHrTKsRN6pC0F+Tfaj5pJTSTUfMb1hkhPig0oj8C340cUvIurzeb6u2bD9f0vTNW
+CKWSXN7O8yWWfRTaxoKOaX+O2UEp8p5ow4HR0SvhTWIkEOe87F48fWXqTDeZjjlpBD3LfjAJ02Jx
+mPhhYqd2EFim6QgGbigEmE7q+SakYcySeBe2sRf3NhNoVtjJchc0bEC0CrrOxZbFXkJ0qoRMNsRQ
+y9oQVamaqiig0WX28yNn2EIZFMVUwz+NndV+bBQFGV/nNVfZVOu0OzIXB2MEOxl4g4Xdq7zx11jX
+I2f3mR3kgf4UNCkXR4SM8pTd1yevCU8SdIdtYvb4dt8awf5Ycokz2XJdffvDtHHD5PXK2cusH8XR
+zt9AxtHsq6rtEByIS+L9d7vAd5rjwWCvmyWDqc1Uc0KkKS4xywsQrXK0o5p2NHNpdOKPzyDru86g
+IPJNkXgQ29RNbZ86aeLQGEKPuixkPmNg+yx8nkHfZgZtKl0ukV3/rwn0OFWtE6hqfXuq9qQ6n6kB
+cwem+tZTmTr7vk8LXhSbfuIGjFE/ZoI6nCcUnxFiGjLuuCFzE3wAe2bqM1OPmDo7ZanaPxxTHWfY
+qY7vPZmp1nd+rve8mHk2MOoIP8CdCi4NueA0ASd2kKbIzeSZqc9MPWbqKTvV+QF3ajAwNQy/xtQi
+L2/3My54yU4jlvXMl3P4MpSrg31XLs+x+nLZnrMr12cshOKLbSs8vDk6/cZr6/nBAB7JePoINo65
+Mm8gfeTfxa/LWafJzU60Nzu0h9jU0Kg7steuY2gkAfloDCfpHMVzms4Jfqzj2Myn68zO0fl6bDPz
+6bHNzsB6dgZuszNwe6hzhp8jrHs2721A5O5/4/s4pTut/q+h1aNtx3d2Bk/jJT2Uq7ypymV/pY1n
+MiOfh+UYkfez18S0Lxh+WaZzQT7e4BkX+EpweYW6fUFmjcgisgm8C3KDsxRQy2JOsDFN1yIviW+R
+q1+vyTpXGVFVKzLZC5EhYxwpe6t4Zfq65e3dUMlxXsGyLXjcD6vd6BpGFMXFERcwvNHlOh3TH5Db
+u/xe5bCeaouG1/0t1uUw6178DTho+5s=</history:state>
+  </history:slice_history>
+  <flack:slice_info view="graph"/>
+</rspec>
